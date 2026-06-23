@@ -11,24 +11,18 @@ cargo bininstall wkg
 wkg wit fetch -d . --cache ./.wit-cache
 ```
 
+Include `-S p3=y` in options passed to `wasmtime`
+
+```bash
+#!/usr/bin/env -S /home/user/bin/wasmtime run -W component-model-async=y -S p3=y /ABSOLUTE/PATH/TO/native-messaging-componentize-qjs/p3/nm_componentize_qjs.wasm
+```
+
 ### Compile to WASM
 
 ```shell
 bun x componentize-qjs -n native-messaging-componentize-qjs -w . -m \
 --opt-size --js nm_componentize_qjs.js -o nm_componentize_qjs.wasm
 ```
-
-### WASI P3
-
-```shell
-wkg wit fetch -d ./p3 --cache ./.wit-cache
-```
-
-```shell
-bun x componentize-qjs -n native-messaging-componentize-qjs -w ./p3 -m --opt-size \
---js ./p3/nm_componentize_qjs_p3.js -o ./p3/nm_componentize_qjs_p3.wasm
-```
-
 # Installation and usage on Chrome and Chromium
 
 1. Navigate to `chrome://extensions`.

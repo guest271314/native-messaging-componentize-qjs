@@ -58,6 +58,20 @@ The Native Messaging host echoes back the message passed.
 
 For differences between OS and browser implementations see [Chrome incompatibilities](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging).
 
+# Testing
+
+## Deno 
+[nm_standalone_test.js](https://github.com/guest271314/NativeMessagingHosts/blob/main/nm_standalone_test.js) 
+
+```shell
+nm_standalone_test.js ./nm_componentize_qjs.sh
+```
+## Node.js 
+[nm_standalone_test_node.js](https://github.com/guest271314/NativeMessagingHosts/blob/main/nm_standalone_test_node.js)
+```shell
+nm_standalone_test_node.js ./nm_componentize_qjs.sh
+```
+
 ## License
 Do What the Fuck You Want to Public License [WTFPLv2](http://www.wtfpl.net/about/)
 

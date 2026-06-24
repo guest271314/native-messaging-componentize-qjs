@@ -52,7 +52,7 @@ bun x componentize-qjs -n native-messaging-componentize-qjs-p3 -w ./p3 -m \
 5. Note the generated extension ID.
 6. Open `nm_componentize_qjs.json` in a text editor, set `"path"` to absolute path of `nm_componentize_qjs.sh` and `chrome-extension://<ID>/` using ID from 5 in `"allowed_origins"` array, and set `nm_componentize_qjs.sh` permission to executable.
 7. Copy the file to Chrome or Chromium configuration folder, e.g., Chromium on Linux `~/.config/chromium/NativeMessagingHosts`; Chrome dev channel on Linux `~/.config/google-chrome-unstable/NativeMessagingHosts`.
-8. To test click `service worker` link in panel of unpacked extension which is DevTools for `background.js` in MV3 `ServiceWorker`, observe echo'ed message from Bun Native Messaging host. To disconnect run `port.disconnect()`.
+8. To test click `service worker` link in panel of unpacked extension which is DevTools for `background.js` in MV3 `ServiceWorker`, observe echo'ed message from componentize-qjs Native Messaging host. To disconnect run `port.disconnect()`.
 
 The Native Messaging host echoes back the message passed. 
 

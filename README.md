@@ -6,16 +6,42 @@
 bun install --cache-dir ./.bun-cache componentize-qjs
 ```
 
+### WASI P2
+
+#### WIT
 ```shell
 cargo bininstall wkg
 wkg wit fetch -d . --cache ./.wit-cache
 ```
 
-### Compile to WASM
-
+#### Compile
 ```shell
 bun x componentize-qjs -n native-messaging-componentize-qjs -w . -m \
 --opt-size --js nm_componentize_qjs.js -o nm_componentize_qjs.wasm
+```
+
+#### Run
+```bash
+#!/usr/bin/env -S wasmtime run -W component-model-async=y /ABSOLUTE/PATH/TO/native-messaging-componentize-qjs/nm_componentize_qjs.wasm 
+```
+### WASI P3
+
+#### WIT
+```shell
+wkg wit fetch -d ./p3 --cache ./.wit-cache
+```
+
+#### Compile
+
+```shell
+bun x componentize-qjs -n native-messaging-componentize-qjs-p3 -w ./p3 -m \
+--opt-size --js ./p3/nm_componentize_qjs_p3.js -o ./p3/nm_componentize_qjs_p3.wasm
+```
+
+#### Run
+
+```bash
+#!/usr/bin/env -S wasmtime run -W component-model-async=y -S p3=y /ABSOLUTE/PATH/TO/native-messaging-componentize-qjs/p3/nm_componentize_qjs_p3.wasm
 ```
 # Installation and usage on Chrome and Chromium
 

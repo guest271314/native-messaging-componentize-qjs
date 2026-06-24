@@ -11,12 +11,6 @@ cargo bininstall wkg
 wkg wit fetch -d . --cache ./.wit-cache
 ```
 
-Include `-S p3=y` in options passed to `wasmtime`
-
-```bash
-#!/usr/bin/env -S /home/user/bin/wasmtime run -W component-model-async=y -S p3=y /ABSOLUTE/PATH/TO/native-messaging-componentize-qjs/p3/nm_componentize_qjs.wasm
-```
-
 ### Compile to WASM
 
 ```shell

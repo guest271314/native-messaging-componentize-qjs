@@ -43,7 +43,7 @@ bun x componentize-qjs -n native-messaging-componentize-qjs-p3 -w ./p3 -m \
 ```bash
 #!/usr/bin/env -S wasmtime run -W component-model-async=y -S p3=y /ABSOLUTE/PATH/TO/native-messaging-componentize-qjs/p3/nm_componentize_qjs_p3.wasm
 ```
-# Installation and usage on Chrome and Chromium
+### Installation and usage on Chrome and Chromium
 
 1. Navigate to `chrome://extensions`.
 2. Toggle `Developer mode`.
@@ -58,21 +58,21 @@ The Native Messaging host echoes back the message passed.
 
 For differences between OS and browser implementations see [Chrome incompatibilities](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging).
 
-# Testing
+### Testing
 
-## Deno 
+#### Deno 
 [nm_standalone_test.js](https://github.com/guest271314/NativeMessagingHosts/blob/main/nm_standalone_test.js) 
 
 ```shell
 nm_standalone_test.js ./nm_componentize_qjs.sh
 ```
-## Node.js 
+#### Node.js 
 [nm_standalone_test_node.js](https://github.com/guest271314/NativeMessagingHosts/blob/main/nm_standalone_test_node.js)
 ```shell
 nm_standalone_test_node.js ./nm_componentize_qjs.sh
 ```
 
-## License
+### License
 Do What the Fuck You Want to Public License [WTFPLv2](http://www.wtfpl.net/about/)
 
 
